@@ -12,27 +12,24 @@ export default defineConfig({
 
   use: {
     headless: false,
-    screenshot: 'on'
+    screenshot: 'on',
+    browserName: 'chromium',
+    channel: 'msedge',
+    ...devices['Desktop Chrome']
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { channel: 'msedge', ...devices['Desktop Chrome'] },
+      name: 'Smoke Tests',
+      grep: /@smoke/
     },
-
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: 'Regression Tests',
+      grep: /@regression/
     }
 
-  ],
+  ]
 
 });
 
