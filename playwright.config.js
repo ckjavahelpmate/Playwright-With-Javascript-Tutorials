@@ -6,7 +6,9 @@ export default defineConfig({
 
   reporter: 'html',
 
-  fullyParallel: true, // Not required by default tests run in parallel
+  retries: 3, // Retry once on failure
+
+  fullyParallel: true, // To execute tests in parallel -> by default true
 
   workers: 5, // Number of parallel workers
 

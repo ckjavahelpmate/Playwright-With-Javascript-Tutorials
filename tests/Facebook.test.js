@@ -1,4 +1,7 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "@playwright/test"; // modern node version
+
+// const { test, expect} = require('@playwright/test'); // old node version
+
 import fs from 'fs';
 
 test("@smoke @regression Facebook Test-01", async ({ page }) => {
