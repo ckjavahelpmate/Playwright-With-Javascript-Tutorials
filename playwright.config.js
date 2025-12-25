@@ -1,5 +1,9 @@
 
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test'; // To import defineConfig & devices from Playwright test module
+import dotenv from 'dotenv'; // To import dotenv module
+
+
+dotenv.config({ path: '.env', override: true }); // To configure & specify path to .env file
 
 export default defineConfig(
   {
@@ -8,8 +12,8 @@ export default defineConfig(
     timeout: 50 * 1000, // each test is given 50 seconds
     reporter: 'html', // To generate HTML report
     retries: 1, // Retry once on failure
-    fullyParallel: true, // To execute tests in parallel -> by default true
-    workers: 5, // Number of parallel workers
+    fullyParallel: false, // To execute tests in parallel -> by default true
+    // workers: 5, // Number of parallel workers
 
     // use {} = browser/context/page shared settings for all the projects below
     use:
@@ -28,6 +32,10 @@ export default defineConfig(
       },
       permissions: ['notifications'], // To handle notification pop-ups
     },
+
+    // Global setup & teardown files
+    globalSetup: './tests/hooks/global-setup.js',
+    globalTeardown: './tests/hooks/global-teardown.js',
 
     // test grouping & execution rules, like smoke, regression, etc.
     projects:
