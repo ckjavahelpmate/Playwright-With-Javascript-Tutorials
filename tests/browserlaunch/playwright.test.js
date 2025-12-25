@@ -8,7 +8,14 @@ test('@smoke @regression Playwright Test-01', async ({ page }) => {
 
 test('@regression Playwright Test-02', async ({ page }) => {
   await page.goto('https://playwright.dev/');
+
+  await page.waitForTimeout(3000);
+
+  await page.evaluate(() => document.body.style.zoom = "40%");
+
   await page.waitForTimeout(3000);
   await expect(page).toHaveTitle(/Playwright/);
+
+  
 });
 

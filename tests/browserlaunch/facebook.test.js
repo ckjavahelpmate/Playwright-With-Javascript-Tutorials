@@ -2,20 +2,20 @@ import { test, expect } from "@playwright/test"; // modern node version
 
 // const { test, expect} = require('@playwright/test'); // old node version
 
-import fs from 'fs';
 
 test("@smoke @regression Facebook Test-01", async ({ page }) => {
     await page.goto("https://www.facebook.com/");
     await page.waitForTimeout(3000);
     console.log('test finished');
 
-    
+    await page.evaluate(() => {
+        document.body.style.zoom = "30%";
+    });
+
 });
 
-test("@regression Facebook Test-02", async ({ page }) => {
+test("@regression Facebook Test-02", async ({ page }, testInfo) => {
     await page.goto("https://www.facebook.com/");
     await page.waitForTimeout(3000);
-    console.log('test finished');
-    const testDataModule = JSON.parse(fs.readFileSync('./testdata/testData.json', 'utf-8'));
-    console.log(testDataModule);
+    console.log(testInfo.title + " finished");
 });

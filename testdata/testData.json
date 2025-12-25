@@ -1,25 +1,36 @@
 {
-  "users": [
+  "loginData": [
     {
-      "id": 1,
+      "testDataName": "adminLogin",
+      "username": "admin",
+      "password": "admin123"
+    },
+    {
+      "testDataName": "qaLogin",
+      "username": "qa_user",
+      "password": "qa123"
+    }
+  ],
+  "searchData": [
+    {
+      "testDataName": "playwrightSearch",
+      "keyword": "Playwright"
+    },
+    {
+      "testDataName": "seleniumSearch",
+      "keyword": "Selenium"
+    }
+  ],
+  "profileData": [
+    {
+      "testDataName": "johnProfile",
       "name": "John Doe",
-      "email": "john.doe@example.com",
-      "age": 30,
-      "isActive": true
+      "email": "john@test.com"
     },
     {
-      "id": 2,
+      "testDataName": "janeProfile",
       "name": "Jane Smith",
-      "email": "jane.smith@example.com",
-      "age": 25,
-      "isActive": false
-    },
-    {
-      "id": 3,
-      "name": "Alice Johnson",
-      "email": "alice.johnson@example.com",
-      "age": 28,
-      "isActive": true
+      "email": "jane@test.com"
     }
   ]
 }
