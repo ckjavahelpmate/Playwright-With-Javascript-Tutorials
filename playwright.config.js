@@ -14,6 +14,7 @@ export default defineConfig(
     retries: 1, // Retry once on failure
     fullyParallel: false, // To execute tests in parallel -> by default true
     // workers: 5, // Number of parallel workers
+    slowMo: 100, // Slow down by 100ms
 
     // use {} = browser/context/page shared settings for all the projects below
     use:
