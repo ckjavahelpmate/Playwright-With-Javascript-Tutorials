@@ -12,9 +12,9 @@ export default defineConfig(
     timeout: 50 * 1000, // each test is given 50 seconds
     reporter: 'html', // To generate HTML report
     retries: 1, // Retry once on failure
-    fullyParallel: false, // To execute tests in parallel -> by default true
-    // workers: 5, // Number of parallel workers
-    slowMo: 100, // Slow down by 100ms
+    fullyParallel: true, // To execute tests in parallel -> by default true
+    workers: 5, // Number of parallel workers
+    // slowMo: 100, // Slow down by 100ms
 
     // use {} = browser/context/page shared settings for all the projects below
     use:

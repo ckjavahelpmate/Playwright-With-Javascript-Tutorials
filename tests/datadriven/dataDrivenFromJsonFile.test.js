@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import testData from '../../testdata/testData.json' assert { type: 'json' };
+import testData from '../../test-data/testData.json' assert { type: 'json' };
 
 
 test.describe('Login Tests',  { tag: ['@regression', '@smoke'] }, () => {
