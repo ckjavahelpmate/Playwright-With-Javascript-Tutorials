@@ -35,9 +35,5 @@ test.describe("Alert Pop-up Example", { tag: "@regression" }, () => {
         await page.waitForTimeout(3000)
 
 
-
-
-
-
     })
 })
