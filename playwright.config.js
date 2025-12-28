@@ -9,6 +9,7 @@ export default defineConfig(
   {
     // Global settings
     testDir: './tests', // To specify test directory
+    snapshotDir: './visual-test-snapshots', 
     timeout: 50 * 1000, // each test is given 50 seconds
     reporter: 'html', // To generate HTML report
     retries: 1, // Retry once on failure
