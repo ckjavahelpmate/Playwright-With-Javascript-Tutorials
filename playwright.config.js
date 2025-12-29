@@ -22,7 +22,7 @@ export default defineConfig(
     {
       headless: process.env.HEADLESS ? process.env.HEADLESS.toLocaleLowerCase() === 'true' : false,// To run tests in headless mode or not
       screenshot: 'on', // To take screenshots even when tests pass; options are off, on, only-on-failure
-      video: 'off', // To record video for each test; options are off, on, retain-on-failure
+      video: 'on', // To record video for each test; options are off, on, retain-on-failure
       trace: 'on', // To capture trace for each test; options are off, on, retain-on-failure
       browserName: process.env.BROWSER || 'chromium', // Default browser
       channel: process.env.CHANNEL || 'chrome', // To specify channel like chrome, msedge, etc.
