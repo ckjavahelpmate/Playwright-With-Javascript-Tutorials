@@ -24,7 +24,7 @@ export default defineConfig(
       screenshot: 'on', // To take screenshots even when tests pass; options are off, on, only-on-failure
       video: 'on', // To record video for each test; options are off, on, retain-on-failure
       trace: 'on', // To capture trace for each test; options are off, on, retain-on-failure
-      browserName: process.env.BROWSER || 'chromium', // Default browser
+      browserName: process.env.CHANNEL==='firefox' || process.env.CHANNEL==='webkit'? process.env.CHANNEL : 'chromium', // Default browser
       channel: process.env.CHANNEL || 'msedge', // To specify channel like chrome, msedge, etc.
       httpCredentials: // To handle Authentication pop-ups
       {

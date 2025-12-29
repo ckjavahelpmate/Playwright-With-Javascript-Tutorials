@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test.describe('Code gen test ', { tag: "@codegen-regression", "@regression" }, async () => {
+test.describe('Code gen test ', { tag:[ "@codegen-regression", "@regression"] }, async () => {
     test("Login Test", async ({ page }) => {
         await page.goto('https://www.facebook.com/');
         await page.waitForTimeout(3000);
