@@ -25,7 +25,7 @@ export default defineConfig(
       video: 'on', // To record video for each test; options are off, on, retain-on-failure
       trace: 'on', // To capture trace for each test; options are off, on, retain-on-failure
       browserName: process.env.BROWSER || 'chromium', // Default browser
-      channel: process.env.CHANNEL || 'chrome', // To specify channel like chrome, msedge, etc.
+      channel: process.env.CHANNEL || 'msedge', // To specify channel like chrome, msedge, etc.
       httpCredentials: // To handle Authentication pop-ups
       {
         username: 'admin',
