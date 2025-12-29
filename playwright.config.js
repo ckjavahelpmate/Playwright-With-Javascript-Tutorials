@@ -20,7 +20,7 @@ export default defineConfig(
     // use {} = browser/context/page shared settings for all the projects below
     use:
     {
-      headless: process.env.HEADLESS || false,// To run tests in headless mode or not
+      headless: process.env.HEADLESS ? process.env.HEADLESS.toLocaleLowerCase() === 'true' : false,// To run tests in headless mode or not
       screenshot: 'on', // To take screenshots even when tests pass; options are off, on, only-on-failure
       video: 'off', // To record video for each test; options are off, on, retain-on-failure
       trace: 'on', // To capture trace for each test; options are off, on, retain-on-failure
