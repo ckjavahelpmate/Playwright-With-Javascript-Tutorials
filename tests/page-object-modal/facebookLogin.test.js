@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pages/loginPage';
 
-test.describe('Facebook Login Page Tests', { tag: '@regression' }, () => {
+test.describe('Facebook Login Page Tests', { tag: '@page-object-modal-regression' }, () => {
 
     let loginPage;
     test.beforeEach(async ({ page }) => {

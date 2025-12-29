@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test"; // modern node version
 // const { test, expect} = require('@playwright/test'); // old node version
 
 
-test("Facebook Test-01", { tag: ['@regression', '@smoke'] }, async ({ page }) => {
+test("Facebook Test-01", { tag: ['@browser-launch-regression', '@browser-launch-smoke', "@smoke", '@regression'] }, async ({ page }) => {
     await page.goto("https://www.facebook.com/");
     await page.waitForTimeout(3000);
     console.log('test finished');
@@ -14,7 +14,7 @@ test("Facebook Test-01", { tag: ['@regression', '@smoke'] }, async ({ page }) =>
 
 });
 
-test("Facebook Test-02",  { tag: ['@regression'] },async ({ page }, testInfo) => {
+test("Facebook Test-02",  { tag: ['@browser-launch-regression', "@regression"] },async ({ page }, testInfo) => {
     await page.goto("https://www.facebook.com/");
     await page.waitForTimeout(3000);
     console.log(testInfo.title + " finished");

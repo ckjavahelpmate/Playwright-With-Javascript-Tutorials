@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import testData from '../../test-data/testData.json' assert { type: 'json' };
 
 
-test.describe('Login Tests',  { tag: ['@regression', '@smoke'] }, () => {
+test.describe('Login Tests',  { tag: ['@datadriven-regression', '@datadriven-smoke', '@smoke', '@regression'] }, () => {
     for (const data of testData.loginData) {
         test(`Login with ${data.username}`, async ({ page }) => {
 
@@ -16,7 +16,7 @@ test.describe('Login Tests',  { tag: ['@regression', '@smoke'] }, () => {
 });
 
 
-test.describe('Search Tests',  { tag: ['@regression'] }, () => {
+test.describe('Search Tests',  { tag: ['@datadriven-regression', '@regression'] }, () => {
     for (const data of testData.searchData) {
         test(`Search for ${data.keyword}`, async ({ page }) => {
 
@@ -29,7 +29,7 @@ test.describe('Search Tests',  { tag: ['@regression'] }, () => {
 });
 
 
-test.describe('Profile Update Tests', { tag: ['@regression', '@smoke'] }, () => {
+test.describe('Profile Update Tests', { tag: ['@datadriven-regression', '@datadriven-smoke'] }, () => {
     for (const data of testData.profileData) {
         test(`Update profile for ${data.name}`, async ({ page }) => {
 

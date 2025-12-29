@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import fs from 'fs';
 
-test.describe("Verify file download", { tag: "@regression" }, () => {
+test.describe("Verify file download", { tag: "@playwright-core-examples-regression" }, () => {
     test("Verify File download", async ({ page }) => {
 
         await page.goto("https://the-internet.herokuapp.com/download")
@@ -29,11 +29,11 @@ test.describe("Verify file download", { tag: "@regression" }, () => {
     })
 })
 
-test.describe("Verify file download Using helper funstion", { tag: "@regression" }, () => {
+test.describe("Verify file download Using helper funstion", { tag: "@playwright-core-examples-regression" }, () => {
     test("Verify File download using helper funstion", async ({ page }) => {
 
         await page.goto("https://the-internet.herokuapp.com/download")
-        await page.waitForTimeout(3000)
+        // await page.waitForTimeout(3000)
 
         // download and save file
         const filePath = await downloadFile(page, async () => {

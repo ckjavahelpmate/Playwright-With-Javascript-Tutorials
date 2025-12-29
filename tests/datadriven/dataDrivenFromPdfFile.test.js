@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 import { PDFParse } from 'pdf-parse'
 // const pdfParse = require('pdf-parse');
 
-test.describe("Data Read From Pdf File", { tag: "@regression" }, () => {
+test.describe("Data Read From Pdf File", { tag: "@regression", "@data-driven-regression" }, () => {
     test("Data Read From Pdf File", async ({ page }) => {
 
         const pdfPaerser = new PDFParse({ url: "./test-data/Receipt.pdf" });

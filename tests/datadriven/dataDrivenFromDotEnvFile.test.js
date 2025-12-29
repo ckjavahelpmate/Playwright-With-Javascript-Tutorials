@@ -6,7 +6,7 @@ const env = process.env.env;
 const username = process.env.username;
 const password = process.env.password;
 
-test.describe('Data-Driven Testing from .env File', { tag: ['@regression'] }, () => {
+test.describe('Data-Driven Testing from .env File', { tag: ['@datadriven-regression', "@regression"] }, () => {
   test('Login Test using .env Data @datadriven', async ({ page }) => {
     console.log(`Environment: ${env}`);
 

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { getMonthIndex } from '../../constants/months.js';
 
-test('Date-picker', { tag: ['@regression', '@smoke'] }, async ({ page }) => {
+test('Date-picker', { tag: ['@date-picker-regression', '@date-picker-smoke'] }, async ({ page }) => {
 
     const date = "12/25/2024".split("/");
 

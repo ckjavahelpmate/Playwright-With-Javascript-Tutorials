@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test.describe("Independent dependent traversing", { tag: "@regression" },  () => {
+test.describe("Independent dependent traversing", { tag: "@playwright-core-examples-regression" },  () => {
     test("Fetch Product Price", async ({ page }) => {
 
         await page.goto("https://www.flipkart.com");
